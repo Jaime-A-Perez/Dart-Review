@@ -22,7 +22,7 @@ enum PlantType{
 abstract class EnergyPlant {
 
   double energyLeft;
-  PlantType type;
+  final PlantType type;
 
   EnergyPlant({ 
     required this.energyLeft,
@@ -32,7 +32,7 @@ abstract class EnergyPlant {
   void consumeEnergy(double amount);
 }
 
-// exends o implements
+// exends 
 class WindPlant extends EnergyPlant {
 
   WindPlant({ required double initialEnergy})
@@ -44,3 +44,19 @@ class WindPlant extends EnergyPlant {
   }
 }
 
+// implements
+class NuclearPlant implements EnergyPlant {
+
+  @override
+  double energyLeft;
+
+  @override
+  final PlantType type = PlantType.nuclear;
+
+  NuclearPlant({ required this.energyLeft});
+
+  @override
+  void consumeEnergy( double amount ) {
+    energyLeft -= (amount * 0.5);
+  }
+}
