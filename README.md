@@ -25,10 +25,8 @@ Welcome to Dart-Review! This repository is your go-to resource for understanding
 git clone https://github.com/Jaime-A-Perez/Dart-Review
 
 # Navigate to the directory
-cd rick-and-morty-app
+cd Dart-Review
 
-# Run the app
-flutter run
    ```
 
 ### 🤝 Contributing
